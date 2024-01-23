@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: left;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #fac92f;
+}
+
+
+/* Home section */
+
+.home {
+    width: 100%;
+    height: 75vh;
+    background-image: url(image.JPG);
+    background-position: center top;
+  background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+.home_text{
+    padding: 240px;
+    font-size: 70px;
+    text-align: left;
+    padding-left: 150px;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    color: #212529;
+    font-weight: 300;
+}
+
+.bgc_op{
+    background-color: #222222;
+}
+.about{
+    padding: 15px;  
+
+}
+.a_fnt{
+    color: #fac92f;
+    font-size: 32px;
+    font-weight: 650;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+.a_ct{
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 15px;
+}
+.card{
+    background-color: #fac92f;
+    color: #111;
+    height: 200px;
+    width: 40%; 
+}
+.c_txt{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.car_ali{
+    padding: 10px;
+}
+.txe_ti{
+    color: #fff;
+}
+footer{
+   padding: 15px;
+   text-align: center;
+   }
+.f_icg{
+    color: #fff;
+    font-size: 35px;
+    padding: 15px;
+}
+.f_icg:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.f_icl{
+    color: #005dbe;
+    font-size: 35px;
+    padding: 15px;
+}
+.f_icl:hover{
+    color: #005dbe;
+    text-decoration: none;
+}
+.f_ici{
+    background: linear-gradient(to right, rgba(131,58,180,1),  rgba(253,29,29,1),rgba(252,176,69,1) );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+    font-size: 35px;
+    padding: 15px; 
+}
+.f_ici:hover{
+    background: linear-gradient(to right, rgba(131,58,180,1),  rgba(253,29,29,1),rgba(252,176,69,1) );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 559px) and (max-width: 1440px) {
+    .home{
+        height: 85vh;
+    }
+    .home_text {
+        padding: 240px;
+        font-size: 60px;
+        padding-left: 150px;
+    }
+}
+@media screen and (min-width: 696px) and (max-width: 1024px) {
+    .home{
+        height: 80vh;
+    }
+    .home_text {
+        padding: 370px;
+        font-size: 52px;
+        padding-left: 91px;
+        font-weight: 400;
+    }
+
+}
+@media screen and (min-width: 696px) and (max-width: 768px) {
+    .home{
+        height: 60vh;
+    }
+    .home_text {
+    padding: 278px;
+    font-size: 41px;
+    padding-left: 65px;
+    font-weight: 500;
+    }
+
+}
+@media screen and (min-width: 425px) and (max-width: 696px) {
+    .home{
+        height: 80vh;
+    }
+    .home_text {
+    padding: 60px;
+    font-size: 36px;
+    /* padding-left: 106px; */
+    font-weight: 600;
+    padding-top: 350px
+    color: #fff;
+    }
+    .card{
+    background-color: #fac92f;
+    color: #111;
+}
+    .c_txt{
+    font-size: 20px;
+    font-weight: 700
+}
+
+}
+@media screen and (min-width: 375px) and (max-width: 696px) {
+    .home{
+        height: 75vh;
+    }
+    .home_text {
+    padding: 60px;
+    font-size: 36px;
+    /* padding-left: 106px; */
+    font-weight: 600;
+    padding-top: 350px;
+    color: #fff;
+    }
+
+}
+@media screen and (min-width: 320px) and (max-width: 696px) {
+    .home{
+        height: 75vh;
+    }
+    .home_text {
+    padding: 60px;
+    font-size: 36px;
+    /* padding-left: 106px; */
+    font-weight: 600;
+    padding-top: 350px;
+    color: #fff;
+    }
+    .affix {
+    padding: 0;
+    background-color: #111;
+    opacity: 0;
+}
+      .card{
+        background-color: #fac92f;
+        color: #111;
+        .c_txt{
+        font-size: 15px;
+        font-weight: 700
+}
+
+}
+
+
