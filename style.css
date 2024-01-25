@@ -376,6 +376,11 @@ body {
 .txe_ti{
     color: #fff;
 }
+.ispa{
+    background-color: #fac92f;
+    text-align: center;
+    padding: 18px; 
+}
 footer{
    padding: 15px;
    text-align: center;
@@ -413,7 +418,11 @@ footer{
                 color: transparent;
     text-decoration: none;
 }
-
+@media screen and (min-width: 768px) and (max-width: 914px){
+    .ispa{
+       background: none;
+    }
+}
 
 @media screen and (min-width: 559px) and (max-width: 1440px) {
     .home{
@@ -423,6 +432,9 @@ footer{
         padding: 240px;
         font-size: 60px;
         padding-left: 150px;
+    }
+    .ispa{
+       background: none;
     }
 }
 @media screen and (min-width: 696px) and (max-width: 1024px) {
@@ -435,6 +447,9 @@ footer{
         padding-left: 91px;
         font-weight: 400;
     }
+    .ispa{
+       background: none;
+    }
 
 }
 @media screen and (min-width: 696px) and (max-width: 768px) {
@@ -446,6 +461,9 @@ footer{
     font-size: 41px;
     padding-left: 65px;
     font-weight: 500;
+    }
+    .ispa{
+       background: none;
     }
 
 }
@@ -469,6 +487,9 @@ footer{
     font-size: 20px;
     font-weight: 700
 }
+.ispa{
+       background: none;
+    }
 
 }
 @media screen and (min-width: 375px) and (max-width: 696px) {
@@ -482,6 +503,9 @@ footer{
     font-weight: 600;
     padding-top: 350px;
     color: #fff;
+    }
+    .ispa{
+       background: none;
     }
 
 }
@@ -509,7 +533,14 @@ footer{
         font-size: 15px;
         font-weight: 700
 }
+.ispa{
+       background: none;
+    }
 
 }
-
+@media screen and (max-width: 320px){
+    .ispa{
+       background: none;
+    }
+}
 
